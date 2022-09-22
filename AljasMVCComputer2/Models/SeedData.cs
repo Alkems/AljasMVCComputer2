@@ -26,29 +26,36 @@ namespace AljasMVCComputer2.Models
                     new Computer
                     {
                         Title = "Computer v12",
-                        Specs = "3080TI 12gb, I9, 64gb",
+                        Specs = "Ultra Fast",
                         Price = 6999
                     },
 
                     new Computer
                     {
                         Title = "Computer v12 Lite",
-                        Specs = "2080TI 8gb, I7, 32gb",
+                        Specs = "Ultra Fast",
                         Price = 3500
                     },
 
                     new Computer
                     {
                         Title = "Computer v10",
-                        Specs = "1080TI 8gb, I7, 16gb",
+                        Specs = "Fast",
                         Price = 2000
                     },
 
                     new Computer
                     {
                         Title = "Computer v8",
-                        Specs = "1050TI 4gb, I5, 8gb",
+                        Specs = "Average",
                         Price = 1000
+                    },
+
+                    new Computer
+                    {
+                        Title = "Computer v8 Lite",
+                        Specs = "Slow",
+                        Price = 600
                     }
                 );
                 context.SaveChanges();

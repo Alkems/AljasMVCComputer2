@@ -20,9 +20,33 @@ namespace AljasMVCComputer2.Controllers
         }
 
         // GET: Computers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string computerSpecs, string searchString)
         {
-            return View(await _context.Computer.ToListAsync());
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Computer
+                                            orderby m.Specs
+                                            select m.Specs;
+
+            var computers = from m in _context.Computer
+                         select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                computers = computers.Where(s => s.Title.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(computerSpecs))
+            {
+                computers = computers.Where(x => x.Specs == computerSpecs);
+            }
+
+            var computerSpecsVM = new ComputerSpecsViewModel
+            {
+                Specs = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Computers = await computers.ToListAsync()
+            };
+
+            return View(computerSpecsVM);
         }
 
         // GET: Computers/Details/5
