@@ -32,7 +32,7 @@ namespace AljasMVCComputer2.Controllers
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                computers = computers.Where(s => s.Title.Contains(searchString));
+                computers = computers.Where(s => s.Name.Contains(searchString));
             }
 
             if (!string.IsNullOrEmpty(computerSpecs))
@@ -78,7 +78,7 @@ namespace AljasMVCComputer2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Specs,Price")] Computer computer)
+        public async Task<IActionResult> Create([Bind("Id,Name,Specs,Price")] Computer computer)
         {
             if (ModelState.IsValid)
             {
@@ -110,7 +110,7 @@ namespace AljasMVCComputer2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Specs,Price")] Computer computer)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Specs,Price")] Computer computer)
         {
             if (id != computer.Id)
             {

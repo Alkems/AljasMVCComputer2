@@ -12,7 +12,7 @@ namespace AljasMVCComputer2.Models
         public int Id { get; set; }
         [StringLength(60, MinimumLength = 3)]
         [Required]
-        public string Title { get; set; }
+        public string Name { get; set; }
         [StringLength(60, MinimumLength = 3)]
         [Required]
         public string Specs { get; set; }

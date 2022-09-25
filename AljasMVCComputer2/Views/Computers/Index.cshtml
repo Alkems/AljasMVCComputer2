@@ -18,8 +18,8 @@
             <option value="">All</option>
         </select>
 
-        Title: <input type="text" asp-for="SearchString" />
-        <input type="submit" value="Filter" />
+        Name: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />
     </p>
 </form>
 
@@ -27,7 +27,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Computers[0].Title)
+                @Html.DisplayNameFor(model => model.Computers[0].Name)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Computers[0].Specs)
@@ -43,7 +43,7 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Title)
+                    @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Specs)

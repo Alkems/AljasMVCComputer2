@@ -25,35 +25,35 @@ namespace AljasMVCComputer2.Models
                 context.Computer.AddRange(
                     new Computer
                     {
-                        Title = "Computer v12",
+                        Name = "Computer v12",
                         Specs = "Ultra Fast",
                         Price = 6999
                     },
 
                     new Computer
                     {
-                        Title = "Computer v12 Lite",
+                        Name = "Computer v12 Lite",
                         Specs = "Ultra Fast",
                         Price = 3500
                     },
 
                     new Computer
                     {
-                        Title = "Computer v10",
+                        Name = "Computer v10",
                         Specs = "Fast",
                         Price = 2000
                     },
 
                     new Computer
                     {
-                        Title = "Computer v8",
+                        Name = "Computer v8",
                         Specs = "Average",
                         Price = 1000
                     },
 
                     new Computer
                     {
-                        Title = "Computer v8 Lite",
+                        Name = "Computer v8 Lite",
                         Specs = "Slow",
                         Price = 600
                     }
