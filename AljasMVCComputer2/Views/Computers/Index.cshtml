@@ -18,7 +18,8 @@
             <option value="">All</option>
         </select>
 
-        Name: <input type="text" asp-for="SearchString" />
+        <label asp-for="SearchString" type="submit" value="Search">Name:</label>
+        <input type="text" asp-for="SearchString" />
         <input type="submit" value="Search" />
     </p>
 </form>
